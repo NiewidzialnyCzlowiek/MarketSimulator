@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <Button fx:id="HomeButton" layoutY="32.0" mnemonicParsing="false" onAction="#homeButton_onAction" prefHeight="50.0" prefWidth="320.0" text="Home" />
+    <Button fx:id="BackButton" layoutY="82.0" mnemonicParsing="false" onAction="#backButton_onAction" prefHeight="50.0" prefWidth="320.0" text="Back" />
+    <ScrollPane fx:id="DetailsScrollPane" prefHeight="550.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
+        <AnchorPane>
+            <VBox fx:id="DetailsVBox" />
+        </AnchorPane>
+    </ScrollPane>
+    <Button fx:id="DeleteIPresentableButton" onAction="#onAction_DeleteIPresentableButton" prefHeight="50" prefWidth="150" text="Delete" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" />
+    <ScrollPane fx:id="GraphsAndListsScrollPane" prefHeight="550.0" prefWidth="678.0" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
+        <AnchorPane fx:id="GraphsAndListsAnchorPane" minHeight="500" minWidth="600" prefWidth="1000">
+            <LineChart fx:id="ValueChart" prefWidth="670" prefHeight="500">
+                <xAxis>
+                    <NumberAxis animated="false" fx:id="XAxis"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis animated="false" fx:id="YAxis"/>
+                </yAxis>
+            </LineChart>
+            <ListView fx:id="TransactionListView" prefWidth="540" visible="false" layoutY="550"/>
+        </AnchorPane>
+    </ScrollPane>
+
+</AnchorPane>

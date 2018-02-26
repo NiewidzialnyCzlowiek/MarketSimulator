@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="700.0" prefWidth="1000.0">
+    <Button layoutY="32.0" mnemonicParsing="false" onAction="#onAction_HomeButton" prefHeight="50.0" prefWidth="320.0" text="Home" />
+    <Button layoutY="82.0" mnemonicParsing="false" onAction="#onAction_BackButton" prefHeight="50.0" prefWidth="320.0" text="Back" />
+    <Pane prefWidth="655.0" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0" layoutY="150">
+        <Label prefHeight="50" text="Company Details">
+            <font>
+                <Font size="18.0" />
+            </font></Label>
+        <ScrollPane layoutY="50.0">
+            <VBox spacing="4">
+                <HBox id="NameHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Name" />
+                    <Label fx:id="NameDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="FirstAssessmentDateHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="First Assessment Date (yyyy.MM.dd)" />
+                    <Label fx:id="FirstAssessmentDateDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="OpeningQuotationHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Opening Quotation" />
+                    <Label fx:id="OpeningQuotationDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="CurrentSharePriceHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Current Share Price" />
+                    <Label fx:id="CurrentSharePriceDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="MinimalSharePriceHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Minimal Share Price" />
+                    <Label fx:id="MinimalSharePriceDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="MaximalSharePriceHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Maximal Share Price" />
+                    <Label fx:id="MaximalSharePriceDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="SharesHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Shares" />
+                    <Label fx:id="SharesDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="ProfitHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Profit" />
+                    <Label fx:id="ProfitDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="RevenueHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Revenue" />
+                    <Label fx:id="RevenueDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="EquityHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Equity" />
+                    <Label fx:id="EquityDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="ShareCapitalHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Share Capital" />
+                    <Label fx:id="ShareCapitalDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="VolumeHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Volume" />
+                    <Label fx:id="VolumeDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <HBox id="TurnoverHBox">
+                    <Label prefHeight="40.0" prefWidth="200" text="Turnover" />
+                    <Label fx:id="TurnoverDataLabel" prefHeight="30.0" prefWidth="200.0" />
+                </HBox>
+                <Button onAction="#onAction_DeleteCompanyButton" prefHeight="20" prefWidth="150" styleClass="form-button" text="Remove Company" />
+            </VBox>
+        </ScrollPane>
+    </Pane>
+</AnchorPane>

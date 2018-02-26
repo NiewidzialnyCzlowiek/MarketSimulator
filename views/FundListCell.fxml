@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="160.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <Label fx:id="NameLabel" prefHeight="50.0" prefWidth="300.0">
+      <font>
+         <Font size="20.0"/>
+      </font>
+   </Label>
+   <Label layoutY="65.0" prefHeight="30.0" prefWidth="300.0" text="Administered by:">
+      <font>
+         <Font size="16.0"/>
+      </font>
+   </Label>
+   <Label fx:id="AdministratorNameLabel" layoutY="100.0" prefHeight="25.0" prefWidth="300.0">
+      <font>
+         <Font size="16.0"/>
+      </font>
+   </Label>
+   <Label fx:id="AdministratorLastNameLabel" layoutY="125.0" prefHeight="25.0" prefWidth="300.0">
+      <font>
+         <Font size="16.0"/>
+      </font>
+   </Label>
+   <Label fx:id="InvestmentBudgetLabel" alignment="CENTER_RIGHT" layoutX="320.0" layoutY="100.0" prefHeight="35.0"
+          prefWidth="280.0" text="Label" textAlignment="RIGHT">
+      <font>
+         <Font size="20.0"/>
+      </font>
+   </Label>
+</AnchorPane>

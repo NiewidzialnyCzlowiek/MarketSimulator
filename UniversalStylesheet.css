@@ -1,0 +1,51 @@
+.button {
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.button:hover {
+    -fx-background-color: lightgrey;
+}
+
+.label {
+    -fx-text-fill: #202020;
+}
+
+.scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-bar {
+    -fx-border-color: transparent;
+    -fx-background-radius: 1;
+}
+.text-field {
+    -fx-background-color: lightgrey;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+}
+.root {
+    -fx-background-color: white;
+}
+
+.form-button {
+    -fx-background-color: lightgrey;
+    -fx-border-color: lightgrey;
+    -fx-background-radius: 0;
+}
+.form-button:hover {
+    -fx-border-color: darkgray;
+}
+.pane {
+    -fx-background-color: transparent;
+}
+.anchor-pane {
+    -fx-background-color: transparent;
+}
+.chart {
+    -fx-padding: 10px;
+}
+.chart-content {
+    -fx-padding: 20px;
+}

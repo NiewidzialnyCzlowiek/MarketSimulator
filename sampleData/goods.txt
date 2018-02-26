@@ -1,0 +1,11 @@
+Gold
+Silver
+Platinum
+Diamond
+Ruby
+Sapphire
+Emerald
+Oil
+Uranium
+Coal
+Cheeseburger

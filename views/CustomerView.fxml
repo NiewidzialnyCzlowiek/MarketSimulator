@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CustomerController">
+    <Button fx:id="HomeButton" layoutY="32.0" mnemonicParsing="false" onAction="#homeButton_onAction" prefHeight="50.0" prefWidth="320.0" text="Home" />
+    <ScrollPane fx:id="NavigationScrollPane" prefHeight="550.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
+        <AnchorPane>
+            <VBox AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+                <Button mnemonicParsing="false" onAction="#onAction_AddInvestor" prefHeight="50.0" prefWidth="320.0" text="Add Investor" />
+                <Button mnemonicParsing="false" onAction="#onAction_AddFund" prefHeight="50.0" prefWidth="320.0" text="Add Fund" />
+                <Button onAction="#onAction_InvestorList" prefHeight="50.0" prefWidth="320.0" text="Investor List" />
+                <Button onAction="#onAction_FundList" prefHeight="50.0" prefWidth="320.0" text="Fund List" />
+            </VBox>
+        </AnchorPane>
+    </ScrollPane>
+    <Pane fx:id="InvestorPane" prefHeight="600.0" prefWidth="655.0" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
+        <Label fx:id="InvestorFormLabel" prefHeight="50" text="Create new Investor">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+        <ScrollPane fx:id="InvestorScrollPane" layoutY="50.0">
+            <Pane>
+                <VBox spacing="4">
+                    <HBox id="PersonalIdHBox">
+                        <Label fx:id="PersonalIdLabel" prefHeight="40.0" prefWidth="150" text="Personal Id" />
+                        <TextField fx:id="PersonalIdTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="NameHBox">
+                        <Label fx:id="NameLabel" prefHeight="40.0" prefWidth="150" text="Name" />
+                        <TextField fx:id="NameTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="LastNameHBox">
+                        <Label fx:id="LastNameLabel" prefHeight="40.0" prefWidth="150" text="Last Name" />
+                        <TextField fx:id="LastNameTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="InvestmentBudgetHBox">
+                        <Label fx:id="InvestmentBudgetLabel" prefHeight="40.0" prefWidth="150" text="Investment Budget" />
+                        <TextField fx:id="InvestmentBudgetTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <Button fx:id="AddInvestorButton" onAction="#onAction_AddInvestorButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Add" />
+                    <Button fx:id="FillInvestorFormButton" onAction="#onAction_FillInvestorFormButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Fill Form" />
+                </VBox>
+            </Pane>
+        </ScrollPane>
+    </Pane>
+    <Pane fx:id="FundPane" prefHeight="600.0" prefWidth="655.0" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
+        <Label fx:id="FundFormLabel" prefHeight="50" text="Create new Fund">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="FundScrollPane" layoutY="50">
+            <Pane>
+                <VBox spacing="4">
+                    <HBox id="FundNameHBox">
+                        <Label fx:id="FundNameLabel" prefHeight="40.0" prefWidth="150" text="Name" />
+                        <TextField fx:id="FundNameTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="FundAdminNameHBox">
+                        <Label fx:id="FundAdminNameLabel" prefHeight="40.0" prefWidth="150" text="Administrator Name" />
+                        <TextField fx:id="FundAdminNameTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="FundAdminLastNameHBox">
+                        <Label fx:id="FundAdminLastNameLabel" prefHeight="40.0" prefWidth="150" text="Administrator Last Name" />
+                        <TextField fx:id="FundAdminLastNameTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="FundInvestmentBudgetHBox">
+                        <Label fx:id="FundInvestmentBudgetLabel" prefHeight="40.0" prefWidth="150" text="Investment Budget" />
+                        <TextField fx:id="FundInvestmentBudgetTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <Button fx:id="AddFundButton" onAction="#onAction_AddFundButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Add" />
+                    <Button fx:id="FillFundFormButton" onAction="#onAction_FillFundFormButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Fill Form" />
+                </VBox>
+            </Pane>
+        </ScrollPane>
+    </Pane>
+    <Pane fx:id="FundListPane" prefHeight="600.0" prefWidth="655.0" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
+        <Label fx:id="FundListLabel" prefHeight="50" text="Fund List">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="FundListScrollPane" layoutY="50">
+            <ListView fx:id="FundListListView" onMouseReleased="#onMouseReleased_FundListListView" prefWidth="655.0" />
+        </ScrollPane>
+    </Pane>
+    <Pane fx:id="InvestorListPane" prefHeight="600.0" prefWidth="655.0" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
+        <Label fx:id="InvestorListLabel" prefHeight="50" text="Investor List">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="InvestorListScrollPane" layoutY="50">
+            <ListView fx:id="InvestorListListView" onMouseReleased="#onMouseReleased_InvestorListListView" prefWidth="655.0" />
+        </ScrollPane>
+    </Pane>
+</AnchorPane>

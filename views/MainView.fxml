@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainPageController">
+    <Label fx:id="StockSimulatorLabel" alignment="CENTER" prefHeight="30.0" prefWidth="300.0" text="Market Simulator"
+           AnchorPane.leftAnchor="350" AnchorPane.topAnchor="100">
+        <font>
+          <Font name="Segoe UI" size="24.0"/>
+        </font>
+    </Label>
+    <GridPane layoutX="200.0" layoutY="200.0" prefHeight="400.0" prefWidth="600.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="0.0" prefWidth="200.0"/>
+            <ColumnConstraints hgrow="NEVER" minWidth="0.0" prefWidth="200.0"/>
+            <ColumnConstraints hgrow="NEVER" minWidth="0.0" prefWidth="200.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="0.0" prefHeight="200.0" vgrow="NEVER"/>
+            <RowConstraints minHeight="0.0" prefHeight="200.0" vgrow="NEVER"/>
+        </rowConstraints>
+        <AnchorPane>
+            <ImageView fitHeight="50" fitWidth="50" preserveRatio="true" AnchorPane.topAnchor="70" AnchorPane.leftAnchor="84">
+                <Image url="@/StaticFiles/CustomerIcon.png"/>
+            </ImageView>
+            <Label text="Customers" AnchorPane.topAnchor="120" prefWidth="198" alignment="CENTER" prefHeight="50"/>
+            <Button fx:id="CustomersButton" mnemonicParsing="false" onAction="#onAction_CustomersButton"
+                    prefHeight="198.0" prefWidth="198.0">
+            </Button>
+        </AnchorPane>
+        <AnchorPane GridPane.columnIndex="1">
+            <ImageView fitHeight="50" fitWidth="70" preserveRatio="true" AnchorPane.topAnchor="70" AnchorPane.leftAnchor="58">
+                <Image url="@/StaticFiles/AssetIcon.png"/>
+            </ImageView>
+            <Label text="Assets" AnchorPane.topAnchor="120" prefWidth="198" alignment="CENTER" prefHeight="50"/>
+            <Button fx:id="AssetsButton" mnemonicParsing="false" onAction="#onAction_AssetsButton"
+                    prefHeight="198.0" prefWidth="198.0"/>
+        </AnchorPane>
+        <AnchorPane GridPane.columnIndex="2">
+            <ImageView fitHeight="50" fitWidth="50" preserveRatio="true" AnchorPane.topAnchor="70" AnchorPane.leftAnchor="74">
+                <Image url="@/StaticFiles/CompanyIcon2.png"/>
+            </ImageView>
+            <Label text="Companies" AnchorPane.topAnchor="120" prefWidth="198" alignment="CENTER" prefHeight="50"/>
+            <Button fx:id="CompanyButton" mnemonicParsing="false" onAction="#onAction_CompanyButton"
+                    prefHeight="198.0" prefWidth="198.0"/>
+        </AnchorPane>
+        <AnchorPane  GridPane.rowIndex="1">
+            <ImageView fitHeight="50" fitWidth="50" preserveRatio="true" AnchorPane.topAnchor="70" AnchorPane.leftAnchor="76">
+                <Image url="@/StaticFiles/MarketIcon.png"/>
+            </ImageView>
+            <Label text="Markets" AnchorPane.topAnchor="120" prefWidth="198" alignment="CENTER" prefHeight="50"/>
+            <Button fx:id="MarketsButton" mnemonicParsing="false" onAction="#onAction_MarketsButton"
+                    prefHeight="198.0" prefWidth="198.0"/>
+        </AnchorPane>
+        <AnchorPane  GridPane.rowIndex="1" GridPane.columnIndex="1">
+            <ImageView fitHeight="50" fitWidth="50" preserveRatio="true" AnchorPane.topAnchor="70" AnchorPane.leftAnchor="76">
+                <Image url="@/StaticFiles/LineChart.png"/>
+            </ImageView>
+            <Label text="Multiple Assets Chart" AnchorPane.topAnchor="120" prefWidth="198" alignment="CENTER" prefHeight="50"/>
+            <Button fx:id="GroupChartButton" mnemonicParsing="false" onAction="#onAction_GroupChartButton"
+                    prefHeight="198.0" prefWidth="198.0"/>
+        </AnchorPane>
+        <AnchorPane   GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <ImageView fitHeight="50" fitWidth="50" preserveRatio="true" AnchorPane.topAnchor="70" AnchorPane.leftAnchor="74">
+                <Image url="@/StaticFiles/SetupIcon.png"/>
+            </ImageView>
+            <Label text="Setup" AnchorPane.topAnchor="120" prefWidth="198" alignment="CENTER" prefHeight="50"/>
+            <Button fx:id="SetupButton" mnemonicParsing="false" onAction="#onAction_SetupButton"
+                    prefHeight="198.0" prefWidth="198.0"/>
+        </AnchorPane>
+    </GridPane>
+</AnchorPane>

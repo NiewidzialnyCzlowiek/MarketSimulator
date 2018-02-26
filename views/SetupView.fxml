@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.SetupController"
+            prefHeight="400.0" prefWidth="600.0">
+    <Button fx:id="HomeButton" layoutY="32.0" mnemonicParsing="false" onAction="#onAction_HomeButton" prefHeight="50.0" prefWidth="320.0" text="Home" />
+    <Pane fx:id="GoodsMarketFormPane" prefHeight="600.0" prefWidth="655.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="100">
+        <Label prefHeight="50" text="General Settings">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="GoodsMarketScrollPane" layoutY="50.0" prefHeight="550.0" prefWidth="655.0">
+            <AnchorPane prefWidth="630.0" prefHeight="500">
+                <VBox spacing="4">
+                    <HBox id="CurrencyHBox">
+                        <Label prefHeight="40.0" prefWidth="200" text="Currency" />
+                        <ChoiceBox fx:id="CurrencyChoiceBox" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketCurrencyHBox">
+                        <Label prefHeight="40.0" prefWidth="200" text="No. of Assets' historical values saved" />
+                        <TextField fx:id="NoOfHistoryRecordsTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketCityHBox">
+                        <Label prefHeight="40.0" prefWidth="200" text="No. of Assets per Customer" />
+                        <TextField fx:id="NoOfAssetsPerCustomerTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <Button fx:id="ApplySettingsButton" onAction="#onAction_ApplySettingsButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Apply Settings" />
+                    <Button fx:id="RestoreDefaultsButton" onAction="#onAction_RestoreDefaultsButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Restore default" />
+                    <Label prefHeight="50"/>
+                    <Label prefHeight="30" text="Data backup and restore"/>
+                    <Button fx:id="SerializeButton" onAction="#onAction_SerializeButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Backup" />
+                    <Button fx:id="DeserializeButton" onAction="#onAction_DeserializeButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Restore" />
+                    <Label fx:id="SerializationStatusLabel" prefHeight="40"/>
+
+                    <Label prefHeight="50"/>
+                    <Label prefHeight="30" text="Sample database generation (this action will delete current data)"/>
+                    <Button fx:id="CreateSampleDatabaseButton" prefHeight="20" text="Create Database" onAction="#onAction_CreateSampleDatabase" styleClass="form-button"/>
+                    <Label fx:id="DatabaseCreationStatusLabel" prefHeight="30"/>
+                </VBox>
+            </AnchorPane>
+        </ScrollPane>
+    </Pane>
+</AnchorPane>

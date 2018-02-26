@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="700.0" prefWidth="1000.0">
+    <Button fx:id="HomeButton" layoutY="32.0" mnemonicParsing="false" onAction="#homeButton_onAction" prefHeight="50.0" prefWidth="320.0" text="Home" />
+    <Button fx:id="BackButton" layoutY="82.0" mnemonicParsing="false" onAction="#backButton_onAction" prefHeight="50.0" prefWidth="320.0" text="Back" />
+    <Pane AnchorPane.topAnchor="150" AnchorPane.leftAnchor="10">
+        <ScrollPane fx:id="MarketFieldsPane" prefHeight="550.0" prefWidth="390.0">
+            <AnchorPane prefWidth="630.0" prefHeight="1000">
+                <VBox spacing="4">
+                    <HBox id="GoodsMarketNameHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Name" />
+                        <Label fx:id="MarketNameLabel" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketCountryHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Country" />
+                        <Label fx:id="MarketCountryLabel" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketCurrencyHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Currency" />
+                        <Label fx:id="MarketCurrencyLabel" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketCityHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="City" />
+                        <Label fx:id="MarketCityLabel" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketAddressHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Address" />
+                        <Label fx:id="MarketAddressLabel" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketMarginHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Margin percent" />
+                        <Label fx:id="MarketMarginLabel" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                </VBox>
+            </AnchorPane>
+        </ScrollPane>
+    </Pane>
+    <Pane fx:id="GoodsMarketContentsPane" prefHeight="600.0" prefWidth="655.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="100" visible="false">
+        <Label prefHeight="50" text="Goods on the Market">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ListView layoutY="50" fx:id="GoodsOnGoodsMarketListView" prefHeight="550.0" prefWidth="650.0"/>
+    </Pane>
+    <Pane fx:id="CurrencyMarketContentsPane" prefHeight="600.0" prefWidth="655.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="100" visible="false">
+        <Label prefHeight="50" text="Currency Assets on the Market">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ListView layoutY="50" fx:id="CurrencyAssetsOnCurrencyMarketListView" prefHeight="550.0" prefWidth="650.0"/>
+    </Pane>
+    <Pane fx:id="StockExchangeContentsPane" prefHeight="600.0" prefWidth="655.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="100" visible="false">
+        <Label prefHeight="50" text="Indexes on the Stock Exchange">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="IndexChoiceBox" layoutY="50" prefHeight="50" onAction="#onAction_IndexChoiceBox"/>
+        <ListView layoutY="100" fx:id="CompaniesOnIndexListView" prefHeight="500.0" prefWidth="650.0"/>
+    </Pane>
+</AnchorPane>

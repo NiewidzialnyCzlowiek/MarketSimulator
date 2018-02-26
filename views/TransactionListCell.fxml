@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="140.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <Label prefHeight="45.0" prefWidth="250.0" text="Customer Name">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Label fx:id="CustomerNameLabel" alignment="CENTER_RIGHT" layoutX="250.0" prefHeight="45.0" prefWidth="250.0">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Label layoutY="45" prefHeight="30.0" prefWidth="250.0" text="Asset Type and Name">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <Label fx:id="AssetTypeAndNameLabel" alignment="CENTER_RIGHT" layoutX="250.0" layoutY="45" prefHeight="30.0" prefWidth="250.0">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <Label layoutY="75" prefHeight="30.0" prefWidth="250.0" text="Quantity">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <Label fx:id="QuantityLabel" alignment="CENTER_RIGHT" layoutX="250.0" layoutY="75" prefHeight="30.0" prefWidth="250.0">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <Label layoutY="105" prefHeight="30.0" prefWidth="250.0" text="Balance after transaction">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <Label fx:id="BalanceLabel" alignment="CENTER_RIGHT" layoutX="250.0" layoutY="105" prefHeight="30.0" prefWidth="250.0">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+</AnchorPane>

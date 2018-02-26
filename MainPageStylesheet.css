@@ -1,0 +1,24 @@
+.button {
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+}
+.button:hover {
+    -fx-border-color: lightgrey;
+}
+.label {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-bar {
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+}
+.root {
+    -fx-background-color: white;
+}
