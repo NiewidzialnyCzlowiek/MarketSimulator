@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="io.bartlomiejszal.marketsimulator.controllers.GroupChartController"
+            prefHeight="700.0" prefWidth="1000.0">
+    <Button fx:id="HomeButton" layoutY="32.0" mnemonicParsing="false" onAction="#homeButton_onAction" prefHeight="50.0" prefWidth="320.0" text="Home"/>
+    <ChoiceBox fx:id="AssetChoiceBox" AnchorPane.topAnchor="150" prefHeight="50" maxWidth="320"/>
+    <Button fx:id="AddToAssetGroupButton" AnchorPane.topAnchor="200" onAction="#onAction_AddToAssetGroupButton" prefHeight="30" prefWidth="100" text="Add to List" styleClass="form-button"/>
+    <ListView fx:id="AssetListView" AnchorPane.topAnchor="250" maxHeight="300" maxWidth="320" prefHeight="300"/>
+    <Button fx:id="RemoveFromAssetGroupButton" AnchorPane.topAnchor="560" prefHeight="30" prefWidth="100" text="Remove Asset" onAction="#onActionRemoveFromAssetGroupButton"/>
+    <Button fx:id="CreateChartButton" AnchorPane.topAnchor="650" prefWidth="100" prefHeight="30" styleClass="form-button" onAction="#onAction_CreateChartButton" text="Create Chart"/>
+    <LineChart fx:id="GroupChart" AnchorPane.topAnchor="150" AnchorPane.leftAnchor="350" prefWidth="680" prefHeight="500">
+        <xAxis>
+            <NumberAxis fx:id="XAxis" animated="false"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="YAxis" animated="false"/>
+        </yAxis>
+    </LineChart>
+</AnchorPane>

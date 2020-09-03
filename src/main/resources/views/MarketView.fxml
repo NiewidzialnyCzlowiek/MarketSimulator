@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.bartlomiejszal.marketsimulator.controllers.MarketController">
+    <Button fx:id="HomeButton" layoutY="32.0" mnemonicParsing="false" onAction="#onAction_HomeButton" prefHeight="50.0" prefWidth="320.0" text="Home" />
+    <ScrollPane fx:id="NavigationScrollPane" prefHeight="550.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
+        <AnchorPane>
+            <VBox AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+                <Button mnemonicParsing="false" onAction="#onAction_AddGoodsMarket" prefHeight="50.0" prefWidth="320.0" text="Add Goods Market" />
+                <Button mnemonicParsing="false" onAction="#onAction_AddCurrencyMarket" prefHeight="50.0" prefWidth="320.0" text="Add Currency Market" />
+                <Button mnemonicParsing="false" onAction="#onAction_AddStockExchange" prefHeight="50.0" prefWidth="320.0" text="Add Stock Exchange" />
+                <Button mnemonicParsing="false" onAction="#onAction_MarketList" prefHeight="50.0" prefWidth="320.0" text="Market List" />
+            </VBox>
+        </AnchorPane>
+    </ScrollPane>
+    <Pane fx:id="GoodsMarketFormPane" prefHeight="600.0" prefWidth="655.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="100">
+        <Label prefHeight="50" text="Create new Goods Market">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="GoodsMarketScrollPane" layoutY="50.0" prefHeight="550.0" prefWidth="655.0">
+            <AnchorPane prefWidth="630.0" prefHeight="1000">
+                <VBox spacing="4">
+                    <HBox id="GoodsMarketNameHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Name" />
+                        <TextField fx:id="GoodsMarketNameTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketCountryHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Country" />
+                        <ChoiceBox fx:id="GoodsMarketCountryChoiceBox" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketCurrencyHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Currency" />
+                        <ChoiceBox fx:id="GoodsMarketCurrencyChoiceBox" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketCityHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="City" />
+                        <TextField fx:id="GoodsMarketCityTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketAddressHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Address" />
+                        <TextField fx:id="GoodsMarketAddressTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="GoodsMarketMarginHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Margin factor" />
+                        <TextField fx:id="GoodsMarketMarginTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <Label prefHeight="50" />
+                    <Label prefHeight="50" text="Add Goods to market" />
+                    <ChoiceBox fx:id="GoodChoiceBox" prefWidth="150" />
+                    <Button onAction="#onAction_AddGoodToMarket" prefHeight="20" prefWidth="100" styleClass="form-button" text="Add Good" />
+                    <Label prefHeight="50"/>
+                    <Label prefHeight="20" text="Goods on Market"/>
+                    <ListView fx:id="GoodsOnGoodsMarketListView" prefWidth="350" />
+                    <Button fx:id="AddGoodsMarketButton" onAction="#onAction_AddGoodsMarketButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Add Market" />
+                </VBox>
+            </AnchorPane>
+        </ScrollPane>
+    </Pane>
+    <Pane fx:id="CurrencyMarketFormPane" prefHeight="600.0" prefWidth="655.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="100" visible="false">
+        <Label prefHeight="50" text="Create new Currency Market">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="CurrencyMarketScrollPane" layoutY="50.0" prefHeight="550.0" prefWidth="655.0">
+            <AnchorPane prefWidth="630.0" prefHeight="1000">
+                <VBox spacing="4">
+                    <HBox id="CurrencyMarketNameHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Name" />
+                        <TextField fx:id="CurrencyMarketNameTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="CurrencyMarketCountryHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Country" />
+                        <ChoiceBox fx:id="CurrencyMarketCountryChoiceBox" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="CurrencyMarketCurrencyHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Currency" />
+                        <ChoiceBox fx:id="CurrencyMarketCurrencyChoiceBox" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="CurrencyMarketCityHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="City" />
+                        <TextField fx:id="CurrencyMarketCityTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="CurrencyMarketAddressHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Address" />
+                        <TextField fx:id="CurrencyMarketAddressTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="CurrencyMarketMarginHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Margin factor" />
+                        <TextField fx:id="CurrencyMarketMarginTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <Label prefHeight="50" />
+                    <Label prefHeight="50" text="Add Currency Assets to market" />
+                    <ChoiceBox fx:id="CurrencyAssetChoiceBox" prefWidth="150" />
+                    <Button onAction="#onAction_AddCurrencyToMarket" prefHeight="20" prefWidth="100" styleClass="form-button" text="Add Currency Asset" />
+                    <Label prefHeight="50" />
+                    <Label prefHeight="20" text="Currency Assets on Market"/>
+                    <ListView fx:id="CurrencyAssetsOnCurrencyMarketListView" prefWidth="350" />
+                    <Button fx:id="AddCurrencyMarketButton" onAction="#onAction_AddCurrencyMarketButton" prefHeight="20" prefWidth="100" styleClass="form-button" text="Add Market" />
+                </VBox>
+            </AnchorPane>
+        </ScrollPane>
+    </Pane>
+    <Pane fx:id="StockExchangeFormPane" prefHeight="600.0" prefWidth="655.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="100" visible="false">
+        <Label prefHeight="50" text="Create new Stock Exchange">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="StockExchangeScrollPane" layoutY="50.0" prefHeight="550.0" prefWidth="655.0">
+            <AnchorPane prefWidth="630.0" prefHeight="1550">
+                <VBox spacing="4">
+                    <HBox id="StockExchangeNameHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Name" />
+                        <TextField fx:id="StockExchangeNameTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="StockExchangeCountryHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Country" />
+                        <ChoiceBox fx:id="StockExchangeCountryChoiceBox" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="StockExchangeCurrencyHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Currency" />
+                        <ChoiceBox fx:id="StockExchangeCurrencyChoiceBox" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="StockExchangeCityHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="City" />
+                        <TextField fx:id="StockExchangeCityTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="StockExchangeAddressHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Address" />
+                        <TextField fx:id="StockExchangeAddressTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+                    <HBox id="StockExchangeMarginHBox">
+                        <Label prefHeight="40.0" prefWidth="150" text="Margin factor" />
+                        <TextField fx:id="StockExchangeMarginTextField" prefHeight="30.0" prefWidth="200.0" />
+                    </HBox>
+
+                    <Label prefHeight="50"/>
+                    <Label prefHeight="30" text="Create Static Indexes"/>
+                    <HBox>
+                        <Label text="Index Name" prefHeight="30" prefWidth="200"/>
+                        <TextField fx:id="StaticIndexNameTextField" prefWidth="200" prefHeight="30"/>
+                    </HBox>
+                    <ChoiceBox fx:id="CompanyChoiceBox"/>
+                    <Button fx:id="AddCompanyToIndexButton" onAction="#onAction_CompanyToIndexButton" prefHeight="20" prefWidth="200" styleClass="form-button" text="Add To Index" />
+                    <ListView prefWidth="630" fx:id="CompaniesToIndexListView"/>
+                    <Button fx:id="AddStaticIndexButton" onAction="#onAction_AddStaticButton" prefHeight="20" prefWidth="200" styleClass="form-button" text="Add Static Index" />
+
+                    <Label prefHeight="50"/>
+                    <Label prefHeight="30" text="Create Dynamics Indexes"/>
+                    <HBox>
+                        <Label text="Index Name" prefWidth="200" prefHeight="30"/>
+                        <TextField fx:id="DynamicIndexNameTextField" prefWidth="200" prefHeight="30"/>
+                    </HBox>
+                    <HBox>
+                        <Label text="No. of Highest Valued Companies" prefWidth="200" prefHeight="30"/>
+                        <TextField fx:id="DynamicIndexNoOfCompaniesTextField" prefWidth="200" prefHeight="30"/>
+                    </HBox>
+                    <Button fx:id="AddDynamicIndexButton" onAction="#onAction_AddDynamicButton" prefHeight="20" prefWidth="200" styleClass="form-button" text="Add Dynamic Index" />
+
+                    <Label prefHeight="50"/>
+                    <Label prefHeight="30" text="Indexes"/>
+                    <ListView fx:id="IndexToStockExchangeListView"/>
+
+                    <Button fx:id="AddStockExchangeButton" onAction="#onAction_AddStockExchangeButton" prefHeight="20" prefWidth="200" styleClass="form-button" text="Add Market" />
+                </VBox>
+            </AnchorPane>
+        </ScrollPane>
+    </Pane>
+    <Pane fx:id="MarketListPane" prefHeight="600.0" prefWidth="655.0" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
+        <Label fx:id="MarketsListLabel" prefHeight="50" text="Market List">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="MarketsListScrollPane" layoutY="50">
+            <ListView fx:id="MarketListListView" prefWidth="655.0" onMouseReleased="#onMouseReleased_GoToMarketDetailsPage"/>
+        </ScrollPane>
+    </Pane>
+
+</AnchorPane>
